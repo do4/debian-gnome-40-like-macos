@@ -6,6 +6,7 @@ getFolder () {
   wget https://github.com/do4/debian-gnome-40-like-macos/blob/main/${1}.tar.xz?raw=true
   mv "${1}.tar.xz?raw=true" ${1}.tar.xz
   tar -xf ${1}.tar.xz
+  [ -f ${1}.tar.xz ] && rm ${1}.tar.xz
 }
 
 getFolder WhiteSur-dark
