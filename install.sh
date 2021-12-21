@@ -9,9 +9,16 @@ getFolder () {
 }
 
 getFolder WhiteSur-dark
+mv WhiteSur-dark .theme/
+
 getFolder BigSur-black
+mv BigSur-black .theme/
+
 getFolder McMojave-cursors
+mv McMojave-cursors .icon/
+
 getFolder mcOS-BS-Dark
+mv mcOS-BS-Dark .theme/
 
 sudo apt install gnome-tweak-tool
 sudo apt install cairo-dock
