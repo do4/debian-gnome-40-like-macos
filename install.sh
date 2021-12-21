@@ -21,5 +21,7 @@ mv McMojave-cursors .icon/
 getFolder mcOS-BS-Dark
 mv mcOS-BS-Dark .theme/
 
+[ -d BigSur-black-dark ] && mv BigSur-black-dark .theme/
+
 sudo apt install gnome-tweak-tool
 sudo apt install cairo-dock
