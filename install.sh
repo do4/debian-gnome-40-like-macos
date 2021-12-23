@@ -30,10 +30,10 @@ if [ -d /usr/share/icons/ ]; then
   sudo mv McMojave-cursors /usr/share/icons/
 fi
 
-if [ -d /usr/share/backgrounds/gnome/ ]; then
+if [ -d /usr/share/images/background-base/ ]; then
   getFile backgrounds.zip
   unzip   backgrounds.zip
-  sudo mv backgrounds/* /usr/share/backgrounds/gnome/
+  sudo mv backgrounds/* /usr/share/images/background-base/
 fi
 
 sudo apt install gnome-tweak-tool
