@@ -11,13 +11,11 @@ getFolder () {
   [ -f ${F} ] && rm ${F}
 }
 
-getFolder WhiteSur-dark
-getFolder BigSur-black
-getFolder McMojave-cursors
-getFolder mcOS-BS-Dark
-getFile   backgrounds.zip
-
 if [ -d /usr/share/themes/ ]; then
+  getFolder WhiteSur-dark
+  getFolder BigSur-black
+  getFolder mcOS-BS-Dark
+
   sudo mv WhiteSur-dark /usr/share/themes/
   sudo mv BigSur-black /usr/share/themes/
   sudo mv mcOS-BS-Dark /usr/share/themes/
@@ -25,7 +23,14 @@ if [ -d /usr/share/themes/ ]; then
 fi
 
 if [ -d /usr/share/icons/ ]; then
+  getFolder McMojave-cursors
   sudo mv McMojave-cursors /usr/share/icons/
+fi
+
+if [ -d /usr/share/backgrounds/gnome/ ]; then
+  getFile backgrounds.zip
+  unzip   backgrounds.zip
+  sudo mv backgrounds/* /usr/share/backgrounds/gnome/
 fi
 
 sudo apt install gnome-tweak-tool
