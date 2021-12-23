@@ -9,16 +9,15 @@ getFile () {
 }
 
 getFolder () {
-  F=${1}.tar.xz
-  getFile ${F}
-  tar -xf ${F}
-  [ -f ${F} ] && rm ${F}
+  getFile ${1}
+  tar -xf ${1}
+  [ -f ${1} ] && rm ${1}
 }
 
 if [ -d /usr/share/themes/ ]; then
-  getFolder WhiteSur-dark
-  getFolder BigSur-black
-  getFolder mcOS-BS-Dark
+  getFolder WhiteSur-dark.tar.xz
+  getFolder BigSur-black.tar.xz
+  getFolder mcOS-BS-Dark.tar.gz
 
   sudo mv WhiteSur-dark /usr/share/themes/
   sudo mv BigSur-black /usr/share/themes/
@@ -27,7 +26,7 @@ if [ -d /usr/share/themes/ ]; then
 fi
 
 if [ -d /usr/share/icons/ ]; then
-  getFolder McMojave-cursors
+  getFolder McMojave-cursors.tar.zx
   sudo mv McMojave-cursors /usr/share/icons/
 fi
 
