@@ -9,18 +9,18 @@ getFolder () {
 }
 
 getFolder WhiteSur-dark
-#mv WhiteSur-dark .theme/
+sudo mv WhiteSur-dark /usr/share/themes/
 
 getFolder BigSur-black
-#mv BigSur-black .theme/
+sudo mv BigSur-black /usr/share/themes/
 
 getFolder McMojave-cursors
-#mv McMojave-cursors .icon/
+sudo mv McMojave-cursors /usr/share/icons/
 
 getFolder mcOS-BS-Dark
-#mv mcOS-BS-Dark .theme/
+sudo mv mcOS-BS-Dark /usr/share/themes/
 
-#[ -d BigSur-black-dark ] && mv BigSur-black-dark .theme/
+[ -d BigSur-black-dark ] && sudo mv BigSur-black-dark /usr/share/themes/
 
 sudo apt install gnome-tweak-tool
 sudo apt install cairo-dock
