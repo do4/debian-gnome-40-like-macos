@@ -1,15 +1,21 @@
 cd ~
 
+getFile () {
+  wget https://raw.githubusercontent.com/do4/debian-gnome-40-like-macos/main/${1}
+}
+
 getFolder () {
-  wget https://raw.githubusercontent.com/do4/debian-gnome-40-like-macos/main/${1}.tar.xz
-  tar -xf ${1}.tar.xz
-  [ -f ${1}.tar.xz ] && rm ${1}.tar.xz
+  F=${1}.tar.xz
+  getFile ${F}
+  tar -xf ${F}
+  [ -f ${F} ] && rm ${F}
 }
 
 getFolder WhiteSur-dark
 getFolder BigSur-black
 getFolder McMojave-cursors
 getFolder mcOS-BS-Dark
+getFile   backgrounds.zip
 
 if [ -d /usr/share/themes/ ]; then
   sudo mv WhiteSur-dark /usr/share/themes/
