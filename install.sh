@@ -1,7 +1,7 @@
 cd ~
 
 getFolder () {
-  wget https://raw.githubusercontent.com/do4/debian-gnome-40-like-macos/main/main/${1}.tar.xz
+  wget https://raw.githubusercontent.com/do4/debian-gnome-40-like-macos/main/${1}.tar.xz
   tar -xf ${1}.tar.xz
   [ -f ${1}.tar.xz ] && rm ${1}.tar.xz
 }
