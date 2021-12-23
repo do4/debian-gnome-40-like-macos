@@ -1,7 +1,11 @@
 cd ~
 
 getFile () {
-  wget https://raw.githubusercontent.com/do4/debian-gnome-40-like-macos/main/${1}
+  U=https://raw.githubusercontent.com/do4/debian-gnome-40-like-macos/main/${1}
+  echo "- - - - -"
+  echo ""
+  echo "GET: ${U}"
+  wget ${U}
 }
 
 getFolder () {
